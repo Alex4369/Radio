@@ -55,7 +55,13 @@ public class RadioTest {
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
     }
-
+    @Test
+    public void turningOn11Waves() {
+        radio.setCurrentRadioStation(-1);
+        int expected = 9;
+        int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+    }
     @Test
 
     public void switchingTheRadioStationUp9() {

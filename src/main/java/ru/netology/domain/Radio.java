@@ -15,7 +15,7 @@ public class Radio {
         }
 
         if (currentRadioStation > 0) {
-           // this.currentRadioStation = currentRadioStation;
+
         }
 
         this.currentRadioStation = currentRadioStation;
@@ -24,7 +24,8 @@ public class Radio {
         return currentRadioStation;
     }
 
-    public int getCurrentRadioStation() {
+    public int getCurrentRadioStation()
+    {
         return currentRadioStation;
     }
 
@@ -44,7 +45,8 @@ public class Radio {
         this.currentVolume = currentVolume;
     }
 
-    public int getCurrentVolume() {
+    public int getCurrentVolume()
+    {
         return currentVolume;
     }
 
@@ -59,9 +61,6 @@ public class Radio {
     public void reduceVolume() {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
-        }
-        if (currentVolume == 0) {
-            currentVolume = currentVolume;
         }
     }
 
