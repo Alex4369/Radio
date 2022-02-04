@@ -1,25 +1,20 @@
 package ru.netology.domain;
 
 public class Radio {
-    private int radioStation = 10;
-    private int volume = 100;
-    private int currentRadioStation = 5;
-    private int radioStationMax = 9;
-    private int radioStationMin = 0;
-    private int currentVolume = 50;
-    private int increaseVolume = 100;
-    private int reduceVolume = 0;
-
-    public Radio(int radioStation, int volume, int currentRadioStation, int radioStationMax, int radioStationMin, int currentVolume, int increaseVolume, int reduceVolume) {
+    public Radio(int radioStation) {
         this.radioStation = radioStation;
-        this.volume = volume;
-        this.currentRadioStation = currentRadioStation;
-        this.radioStationMax = radioStationMax;
-        this.radioStationMin = radioStationMin;
-        this.currentVolume = currentVolume;
-        this.increaseVolume = increaseVolume;
-        this.reduceVolume = reduceVolume;
     }
+
+    private int radioStation ;
+    private int volume ;
+    private int currentRadioStation ;
+    private int radioStationMax ;
+    private int radioStationMin ;
+    private int currentVolume ;
+    private int increaseVolume ;
+    private int reduceVolume ;
+
+
 
     public Radio() {
     }
@@ -65,17 +60,11 @@ public class Radio {
         return radioStation;
     }
 
-   // public void setRadioStation(int a) {
-     //   radioStation = a;
-   // }
 
     public int getVolume() {
         return volume;
     }
 
-  //  public void setVolume(int a) {
-   //     volume = a;
-  //  }
 
     public int getRadioStationMax() {
         if (currentRadioStation < 9) {
@@ -86,9 +75,6 @@ public class Radio {
         return currentRadioStation;
     }
 
-   // public void setRadioStationMax(int a) {
-      //  radioStationMax = a;
-   // }
 
     public int getRadioStationMin() {
         if (currentRadioStation > 0) {
@@ -99,9 +85,6 @@ public class Radio {
         return currentRadioStation;
     }
 
-   // public void setRadioStationMin(int a) {
-       // radioStationMin = a;
-   // }
 
     public int getIncreaseVolume() {
         if (currentVolume < 100) {
@@ -110,9 +93,6 @@ public class Radio {
         return currentVolume;
     }
 
-   // public void setIncreaseVolume(int a) {
-       // increaseVolume = a;
-   // }
 
     public int getReduceVolume() {
         if (currentVolume > 0) {
@@ -121,9 +101,6 @@ public class Radio {
         return currentVolume;
     }
 
-   // public void setReduceVolume(int a) {
-       // reduceVolume = a;
-  //  }
 }
 
 
