@@ -5,33 +5,46 @@ public class Radio {
         this.radioStation = radioStation;
     }
 
-    private int radioStation ;
-    private int volume ;
-    private int currentRadioStation ;
-    private int radioStationMax ;
-    private int radioStationMin ;
-    private int currentVolume ;
-    private int increaseVolume ;
-    private int reduceVolume ;
-
+    private int radioStation = 20;
+    private int volume;
+    private int currentRadioStation;
+    private int radioStationMax;
+    private int radioStationMin;
+    private int currentVolume;
+    private int increaseVolume;
+    private int reduceVolume;
 
 
     public Radio() {
     }
 
+    public void setRadioStation(int radioStation) {
+        if (radioStation < 0) {
+            return;
+        }
+        this.radioStation = radioStation;
+    }
+
     public int getCurrentRadioStation() {
 
-        if (currentRadioStation > 9) {
+        if (currentRadioStation > 19) {
             currentRadioStation = 0;
         }
 
         if (currentRadioStation < 0) {
-            currentRadioStation = 9;
+            currentRadioStation = 19;
         }
         return currentRadioStation;
     }
 
     public void setCurrentRadioStation(int currentRadioStation) {
+        if (currentRadioStation > radioStation - 1) {
+            return;
+        }
+        if (currentRadioStation < 0) {
+            return;
+        }
+
         this.currentRadioStation = currentRadioStation;
     }
 
@@ -55,19 +68,17 @@ public class Radio {
 
     }
 
+    public int getVolume() {
+        return volume;
+    }
 
     public int getRadioStation() {
         return radioStation;
     }
 
 
-    public int getVolume() {
-        return volume;
-    }
-
-
     public int getRadioStationMax() {
-        if (currentRadioStation < 9) {
+        if (currentRadioStation < radioStation - 1) {
             currentRadioStation = currentRadioStation + 1;
         } else {
             currentRadioStation = 0;
@@ -80,7 +91,7 @@ public class Radio {
         if (currentRadioStation > 0) {
             currentRadioStation = currentRadioStation - 1;
         } else {
-            currentRadioStation = 9;
+            currentRadioStation = radioStation;
         }
         return currentRadioStation;
     }

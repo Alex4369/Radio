@@ -6,114 +6,120 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class RadioTest {
-  
+
+    @Test
+    public void turningOnMinus1Waves() {
+        Radio radio = new Radio(20);
+        radio.setCurrentRadioStation(-1);
+        assertEquals(19,radio.getCurrentRadioStation());
+    }
     @Test
     public void turningOn9Waves() {
-        Radio radio = new Radio(10);
-        radio.setCurrentRadioStation(9);
-        assertEquals(9,radio.getCurrentRadioStation());
+        Radio radio = new Radio(20);
+        radio.setCurrentRadioStation(19);
+        assertEquals(19,radio.getCurrentRadioStation());
     }
 
     @Test
     public void turningOn8Waves() {
-        Radio radio = new Radio(10);
-        radio.setCurrentRadioStation(8);
-        assertEquals(8,radio.getCurrentRadioStation());
+        Radio radio = new Radio(20);
+        radio.setCurrentRadioStation(18);
+        assertEquals(18,radio.getCurrentRadioStation());
     }
 
     @Test
     public void turningOn5Waves() {
-        Radio radio = new Radio(10);
-        radio.setCurrentRadioStation(5);
-        assertEquals(5,radio.getCurrentRadioStation());
+        Radio radio = new Radio(20);
+        radio.setCurrentRadioStation(15);
+        assertEquals(15,radio.getCurrentRadioStation());
     }
 
     @Test
     public void turningOn0Waves() {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio(20);
         radio.setCurrentRadioStation(0);
         assertEquals(0,radio.getCurrentRadioStation());
     }
 
     @Test
     public void turningOn1Waves() {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio(20);
         radio.setCurrentRadioStation(1);
         assertEquals(1,radio.getCurrentRadioStation());
     }
 
     @Test
-    public void turningOn10Waves() {
-        Radio radio = new Radio(10);
-        radio.setCurrentRadioStation(10);
+    public void turningOn20Waves() {
+        Radio radio = new Radio(20);
+        radio.setCurrentRadioStation(20);
         assertEquals(0,radio.getCurrentRadioStation());
     }
     @Test
-    public void turningOn11Waves() {
-        Radio radio = new Radio(10);
-        radio.setCurrentRadioStation(11);
+    public void turningOn21Waves() {
+        Radio radio = new Radio(20);
+        radio.setCurrentRadioStation(21);
         assertEquals(0,radio.getCurrentRadioStation());
     }
     @Test
 
-    public void switchingTheRadioStationUp9() {
-        Radio radio = new Radio(10);
-        radio.setCurrentRadioStation(9);
+    public void switchingTheRadioStationUp19() {
+        Radio radio = new Radio(20);
+        radio.setCurrentRadioStation(19);
         assertEquals(0,radio.getRadioStationMax());
     }
 
     @Test
 
-    public void switchingTheRadioStationUp8() {
-        Radio radio = new Radio(10);
-        radio.setCurrentRadioStation(8);
-        assertEquals(9,radio.getRadioStationMax());
+    public void switchingTheRadioStationUp18() {
+        Radio radio = new Radio(20);
+        radio.setCurrentRadioStation(18);
+        assertEquals(19,radio.getRadioStationMax());
     }
 
     @Test
 
-    public void switchingTheRadioStationUp5() {
-        Radio radio = new Radio(10);
-        radio.setCurrentRadioStation(5);
-        assertEquals(6,radio.getRadioStationMax());
+    public void switchingTheRadioStationUp15() {
+        Radio radio = new Radio(20);
+        radio.setCurrentRadioStation(15);
+        assertEquals(16,radio.getRadioStationMax());
     }
 
     @Test
 
     public void switchingTheRadioStationUp0() {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio(20);
         radio.setCurrentRadioStation(0);
         assertEquals(1,radio.getRadioStationMax());
     }
 
     @Test
 
-    public void switchingTheRadioStationDown9() {
-        Radio radio = new Radio(10);
-        radio.setCurrentRadioStation(9);
-        assertEquals(8, radio.getRadioStationMin());
+    public void switchingTheRadioStationDown19() {
+        Radio radio = new Radio(20);
+        radio.setCurrentRadioStation(19);
+        assertEquals(18, radio.getRadioStationMin());
     }
 
     @Test
 
-    public void switchingTheRadioStationDown8() {
-        Radio radio = new Radio(10);
-        radio.setCurrentRadioStation(8);
-        assertEquals(7,radio.getRadioStationMin());
+    public void switchingTheRadioStationDown18() {
+        Radio radio = new Radio(20);
+        radio.setCurrentRadioStation(18);
+        assertEquals(17,radio.getRadioStationMin());
     }
 
     @Test
 
-    public void switchingTheRadioStationDown5() {
-        Radio radio = new Radio(10);
-        radio.setCurrentRadioStation(5);
-        assertEquals(4,radio.getRadioStationMin());
+    public void switchingTheRadioStationDown15() {
+        Radio radio = new Radio(20);
+        radio.setCurrentRadioStation(15);
+        assertEquals(14,radio.getRadioStationMin());
     }
 
     @Test
 
     public void switchingTheRadioStationDown1() {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio(20);
         radio.setCurrentRadioStation(1);
         assertEquals(0,radio.getRadioStationMin());
     }
@@ -121,9 +127,9 @@ public class RadioTest {
     @Test
 
     public void switchingTheRadioStationDown0() {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio(20);
         radio.setCurrentRadioStation(0);
-        assertEquals(9, radio.getRadioStationMin());
+        assertEquals(20, radio.getRadioStationMin());
     }
 
     @Test
