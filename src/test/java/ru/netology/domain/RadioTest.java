@@ -11,7 +11,7 @@ public class RadioTest {
     public void turningOnMinus1Waves() {
         Radio radio = new Radio(20);
         radio.setCurrentRadioStation(-1);
-        assertEquals(19,radio.getCurrentRadioStation());
+        assertEquals(0,radio.getCurrentRadioStation());
     }
     @Test
     public void turningOn9Waves() {
