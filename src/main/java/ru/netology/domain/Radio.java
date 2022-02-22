@@ -19,10 +19,9 @@ public class Radio {
     }
 
     public void setRadioStation(int radioStation) {
-        if (radioStation < 0) {
-            return;
-        }
+
         this.radioStation = radioStation;
+        return;
     }
 
     public int getCurrentRadioStation() {
